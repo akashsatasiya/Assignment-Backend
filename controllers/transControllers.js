@@ -42,7 +42,7 @@ exports.getTotalSum = async(req, res, next) => {
         let [sum, _] = await Transaction.getTotalSum(transaction_id);
         sum = sum[0].amount;
 
-        res.status(200).json({"amount" : Number(sum)});
+        res.status(200).json({"sum" : Number(sum)});
     }
     catch(error) {
         next(error);
